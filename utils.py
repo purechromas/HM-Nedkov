@@ -28,7 +28,7 @@ def get_by_skill(skill_name):
     content = load_candidates()
     same_skills = []
     for skills in content:
-        if skill_name in skills.get("skills"):
+        if skill_name.lower() in skills.get("skills").lower().split(", "):
             same_skills.append(skills)
     return same_skills
 
