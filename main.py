@@ -35,11 +35,10 @@ def skills_page(x):
     output = ""
     data = utils.get_by_skill(x)
     for people in data:
-        if x in people['skills']:
-            output += "Имя кандидата - " + (people['name']) + "\n"
-            output += "Имя кандидата - " + (people['position']) + "\n"
-            output += "Имя кандидата - " + (people['skills']) + "\n"
-            output += "\n"
+        output += "Имя кандидата - " + (people['name']) + "\n"
+        output += "Имя кандидата - " + (people['position']) + "\n"
+        output += "Имя кандидата - " + (people['skills']) + "\n"
+        output += "\n"
     return "<pre>" + output + "</pre>"
 
 
